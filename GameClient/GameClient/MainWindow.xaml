@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Closing="Window_Closing"
+        Title="Tic-Tac-Toe" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="AvailableGames" Margin="0,0,0.2,-0.2"/>
+        <TextBox Name="UsernameField" Grid.Column="1" HorizontalAlignment="Center" Height="44" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="159" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SpellCheck.IsEnabled="True" Text="Bailey Miller"/>
+        <Button Content="Start Searching" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Grid.Column="1" Margin="258.8,238,0,0" IsDefault="True" Height="34" Click="Button_Click"/>
+
     </Grid>
 </Window>
